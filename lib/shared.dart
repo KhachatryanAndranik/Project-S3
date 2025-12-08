@@ -1,0 +1,1 @@
+export './shared/get_it_di.dart';
