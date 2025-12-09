@@ -26,6 +26,6 @@ void main() {
         ),
       );
     },
-    (_, StackTrace __) {},
+    (_, StackTrace _) {},
   );
 }

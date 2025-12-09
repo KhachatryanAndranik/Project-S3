@@ -1,0 +1,23 @@
+import 'package:library_app/data.dart';
+import 'package:library_app/domain.dart';
+
+class LiberaryAuthRepository implements AuthRepository {
+  const LiberaryAuthRepository({required AuthDataSource authLocalDataSource})
+    : _authLocalDataSource = authLocalDataSource;
+
+  final AuthDataSource _authLocalDataSource;
+
+  @override
+  Future<User> logIn(LoginCredentials credentials) async {
+    final response = await _authLocalDataSource.logIn(credentials);
+
+    return User.fromDto(response);
+  }
+
+  @override
+  Future<User> signUp(SignUpCredentials credentials) async {
+    final response = await _authLocalDataSource.signUp(credentials);
+
+    return User.fromDto(response);
+  }
+}

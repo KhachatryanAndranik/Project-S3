@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:library_app/presentation/common/widgets/library_app_bar.dart';
+import 'package:library_app/presentation/common.dart';
 
 @RoutePage()
 class LoginScreen extends StatelessWidget {
@@ -8,8 +8,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const LibraryAppBar(),
-    );
+    return LibraryScaffold(appBar: const LibraryAppBar(title: 'Login'));
   }
 }
