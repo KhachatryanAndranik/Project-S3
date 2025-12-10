@@ -1,4 +1,5 @@
 import 'package:library_app/data.dart';
+import 'package:library_app/presentation/common.dart';
 
 class User {
   const User({
@@ -27,6 +28,16 @@ class User {
 
   UserDto toDto() {
     return UserDto(
+      id: id,
+      username: username,
+      name: name,
+      surname: surname,
+      email: email,
+    );
+  }
+
+  UserViewModel toViewModel() {
+    return UserViewModel(
       id: id,
       username: username,
       name: name,
