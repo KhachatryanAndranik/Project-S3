@@ -1,38 +1,62 @@
 part of 'auth_cubit.dart';
 
-abstract class AuthState {
+abstract class AuthState extends Equatable {
   const AuthState({this.errorMessage});
 
   final String? errorMessage;
 
-  factory AuthState.unauthenticated({String? errorMessage}) = AuthUnauthenticatedState;
-  factory AuthState.authenticating({String? errorMessage}) = AuthAuthenticatingState;
-  factory AuthState.authenticated({required UserViewModel user, String? errorMessage}) =
-      AuthAuthenticatedState;
+  const factory AuthState.unauthenticated({String? errorMessage}) =
+      UnauthenticatedState;
+  const factory AuthState.authenticating({String? errorMessage}) =
+      AuthenticatingState;
+  const factory AuthState.unauthenticating({String? errorMessage}) =
+      UnauthenticatingState;
+  const factory AuthState.authenticated({
+    required UserViewModel user,
+    String? errorMessage,
+  }) = AuthenticatedState;
 
   AuthState copyWith({String? errorMessage}) {
-    if (this is AuthUnauthenticatedState) {
-      return AuthUnauthenticatedState(errorMessage: errorMessage ?? this.errorMessage);
-    } else if (this is AuthAuthenticatingState) {
-      return AuthAuthenticatingState(errorMessage: errorMessage ?? this.errorMessage);
+    if (this is UnauthenticatedState) {
+      return UnauthenticatedState(
+        errorMessage: errorMessage ?? this.errorMessage,
+      );
+    } else if (this is AuthenticatingState) {
+      return AuthenticatingState(
+        errorMessage: errorMessage ?? this.errorMessage,
+      );
+    } else if (this is UnauthenticatingState) {
+      return UnauthenticatingState(
+        errorMessage: errorMessage ?? this.errorMessage,
+      );
     } else {
-      return AuthAuthenticatedState(
-        user: (this as AuthAuthenticatedState).user,
+      return AuthenticatedState(
+        user: (this as AuthenticatedState).user,
         errorMessage: errorMessage ?? this.errorMessage,
       );
     }
   }
+
+  @override
+  List<Object?> get props => [errorMessage];
 }
 
-class AuthUnauthenticatedState extends AuthState {
-  const AuthUnauthenticatedState({super.errorMessage});
+class UnauthenticatedState extends AuthState {
+  const UnauthenticatedState({super.errorMessage});
 }
 
-class AuthAuthenticatingState extends AuthState {
-  const AuthAuthenticatingState({super.errorMessage});
+class AuthenticatingState extends AuthState {
+  const AuthenticatingState({super.errorMessage});
 }
 
-class AuthAuthenticatedState extends AuthState {
-  const AuthAuthenticatedState({required this.user, super.errorMessage});
+class UnauthenticatingState extends AuthState {
+  const UnauthenticatingState({super.errorMessage});
+}
+
+class AuthenticatedState extends AuthState {
+  const AuthenticatedState({required this.user, super.errorMessage});
   final UserViewModel user;
+
+  @override
+  List<Object?> get props => [user, errorMessage];
 }

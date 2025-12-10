@@ -7,7 +7,7 @@ class UserViewModel {
     required this.email,
   });
 
-  final String id;
+  final int id;
   final String username;
   final String name;
   final String surname;

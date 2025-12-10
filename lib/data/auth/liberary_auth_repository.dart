@@ -20,4 +20,16 @@ class LiberaryAuthRepository implements AuthRepository {
 
     return User.fromDto(response);
   }
+
+  @override
+  Future<User?> fetchAuthenticatedUser() async {
+    final response = await _authLocalDataSource.fetchAuthenticatedUser();
+
+    return response != null ? User.fromDto(response) : null;
+  }
+  
+  @override
+  Future<void> logOut() {
+    return _authLocalDataSource.logOut();
+  }
 }

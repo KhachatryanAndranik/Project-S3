@@ -1,13 +1,17 @@
+import 'package:library_app/core.dart';
 import 'package:library_app/data.dart';
 import 'package:library_app/domain/auth/entities/login_credentials.dart';
 import 'package:library_app/domain/auth/entities/sign_up_credentials.dart';
-import 'package:library_app/core/cache.dart';
 
 class AuthLocalDataSource implements AuthDataSource {
-  const AuthLocalDataSource({required CacheDatabase cacheDatabase})
-    : _cacheDatabase = cacheDatabase;
+  const AuthLocalDataSource({
+    required CacheDatabase cacheDatabase,
+    required KeyValueStorage deviceKeyValueStorage,
+  }) : _cacheDatabase = cacheDatabase,
+       _deviceKeyValueStorage = deviceKeyValueStorage;
 
   final CacheDatabase _cacheDatabase;
+  final KeyValueStorage _deviceKeyValueStorage;
 
   @override
   Future<UserDto> logIn(LoginCredentials credentials) async {
@@ -23,7 +27,11 @@ class AuthLocalDataSource implements AuthDataSource {
       throw Exception('Invalid credentials');
     }
 
-    return UserDto.fromJson(result.first);
+    final userDto = UserDto.fromJson(result.first);
+
+    await _storeAuthenticatedUserId(userDto.id);
+
+    return userDto;
   }
 
   @override
@@ -52,7 +60,46 @@ class AuthLocalDataSource implements AuthDataSource {
     if (rows.isEmpty) {
       throw Exception('Failed to create user');
     }
+    
+    final userDto = UserDto.fromJson(rows.first);
 
-    return UserDto.fromJson(rows.first);
+    await _storeAuthenticatedUserId(userDto.id);
+
+    return userDto;
+  }
+
+  @override
+  Future<UserDto?> fetchAuthenticatedUser() async {
+    final userId = await _deviceKeyValueStorage.read<int>('authenticated_user_id');
+
+    if (userId == null) {
+      return null;
+    }
+
+    return _fetchUserById(userId);
+  }
+
+  Future<UserDto?> _fetchUserById(int userId) async {
+    final result = await _cacheDatabase.query(
+      'SELECT * FROM ${DatabaseConstants.users} '
+      'WHERE ${DatabaseConstants.id} = ? '
+      'LIMIT 1',
+      arguments: [userId],
+    );
+
+    if (result.isEmpty) {
+      return null;
+    }
+
+    return UserDto.fromJson(result.first);
+  }
+
+  Future<void> _storeAuthenticatedUserId(int userId) {
+    return _deviceKeyValueStorage.write<int>('authenticated_user_id', userId);
+  }
+  
+  @override
+  Future<void> logOut() {
+    return _deviceKeyValueStorage.remove('authenticated_user_id');
   }
 }

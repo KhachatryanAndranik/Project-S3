@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:library_app/core.dart';
+import 'package:library_app/presentation/common.dart';
 import 'package:provider/provider.dart';
 
 class CommonDependenciesProvider extends StatelessWidget {
@@ -15,10 +17,8 @@ class CommonDependenciesProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        Provider.value(value: BlocFactory(di: di)),
-      ],
-      child: child,
+      providers: [Provider.value(value: BlocFactory(di: di))],
+      child: BlocProvider(create: (context) => di<AuthCubit>(), child: child),
     );
   }
 }

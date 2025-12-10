@@ -21,7 +21,10 @@ class DataDependencies extends PackageDependencies {
     di.registerLazySingleton<CacheDatabase>(() => cacheDb);
 
     di.registerLazySingleton(
-      () => AuthLocalDataSource(cacheDatabase: di<CacheDatabase>()),
+      () => AuthLocalDataSource(
+        cacheDatabase: di<CacheDatabase>(),
+        deviceKeyValueStorage: di(),
+      ),
     );
 
     di.registerLazySingleton<AuthRepository>(
