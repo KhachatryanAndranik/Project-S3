@@ -1,0 +1,602 @@
+[
+  {
+    "title": "Frankenstein; Or, The Modern Prometheus",
+    "author": "Mary Wollstonecraft Shelley (8335)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/84"
+  },
+  {
+    "title": "Moby Dick; Or, The Whale",
+    "author": "Herman Melville (4190)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2701"
+  },
+  {
+    "title": "A Christmas Carol in Prose; Being a Ghost Story of Christmas",
+    "author": "Charles Dickens (3352)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/46"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen (2994)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1342"
+  },
+  {
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson (2853)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/43"
+  },
+  {
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare (2329)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1513"
+  },
+  {
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll (2078)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/11"
+  },
+  {
+    "title": "The King in Yellow",
+    "author": "Robert W. Chambers (1926)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/8492"
+  },
+  {
+    "title": "The Complete Works of William Shakespeare",
+    "author": "William Shakespeare (1893)",
+    "cover_image": "https://covers.openlibrary.org/b/id/8779054-L.jpg",
+    "source_url": "https://www.gutenberg.org/ebooks/100"
+  },
+  {
+    "title": "Middlemarch",
+    "author": "George Eliot (1827)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/145"
+  },
+  {
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne (1818)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/25344"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoyevsky (1815)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2554"
+  },
+  {
+    "title": "A Room with a View",
+    "author": "E. M. Forster (1722)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2641"
+  },
+  {
+    "title": "Beowulf: An Anglo-Saxon Epic Poem (1678)",
+    "author": null,
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/16328"
+  },
+  {
+    "title": "Jane Eyre: An Autobiography",
+    "author": "Charlotte Brontë (1678)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1260"
+  },
+  {
+    "title": "A Doll's House : a play",
+    "author": "Henrik Ibsen (1614)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2542"
+  },
+  {
+    "title": "Little Women; Or, Meg, Jo, Beth, and Amy",
+    "author": "Louisa May Alcott (1591)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/37106"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde (1523)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/174"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald (1475)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/64317"
+  },
+  {
+    "title": "The Blue Castle: a novel",
+    "author": "L. M. Montgomery (1465)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/67979"
+  },
+  {
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens (1457)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/98"
+  },
+  {
+    "title": "The Importance of Being Earnest: A Trivial Comedy for Serious People",
+    "author": "Oscar Wilde (1444)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/844"
+  },
+  {
+    "title": "Adventures of Huckleberry Finn",
+    "author": "Mark Twain (1424)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/76"
+  },
+  {
+    "title": "The Enchanted April",
+    "author": "Elizabeth Von Arnim (1394)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/16389"
+  },
+  {
+    "title": "Cranford",
+    "author": "Elizabeth Cleghorn Gaskell (1365)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/394"
+  },
+  {
+    "title": "Three Men: A Novel",
+    "author": "Maksim Gorky (1352)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/56456"
+  },
+  {
+    "title": "The Expedition of Humphry Clinker",
+    "author": "T. Smollett (1331)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2160"
+  },
+  {
+    "title": "Twenty years after",
+    "author": "Alexandre Dumas and Auguste Maquet (1320)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1259"
+  },
+  {
+    "title": "The Adventures of Ferdinand Count Fathom — Complete",
+    "author": "T. Smollett (1311)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/6761"
+  },
+  {
+    "title": "History of Tom Jones, a Foundling",
+    "author": "Henry Fielding (1283)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/6593"
+  },
+  {
+    "title": "Dracula",
+    "author": "Bram Stoker (1263)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/345"
+  },
+  {
+    "title": "My Life — Volume 1",
+    "author": "Richard Wagner (1260)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/5197"
+  },
+  {
+    "title": "The Adventures of Roderick Random",
+    "author": "T. Smollett (1260)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/4085"
+  },
+  {
+    "title": "A Modest Proposal",
+    "author": "Jonathan Swift (1255)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1080"
+  },
+  {
+    "title": "Leviathan",
+    "author": "Thomas Hobbes (1237)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/3207"
+  },
+  {
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle (1220)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1661"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë (1159)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/768"
+  },
+  {
+    "title": "The Adventures of Tom Sawyer, Complete",
+    "author": "Mark Twain (1104)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/74"
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas and Auguste Maquet (1102)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1184"
+  },
+  {
+    "title": "The Diary of Samuel Pepys — Complete",
+    "author": "Samuel Pepys (1065)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/4200"
+  },
+  {
+    "title": "Great Expectations",
+    "author": "Charles Dickens (1063)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1400"
+  },
+  {
+    "title": "Marjorie at Seacote",
+    "author": "Carolyn Wells (1060)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/18035"
+  },
+  {
+    "title": "Simple Sabotage Field Manual",
+    "author": "United States. Office of Strategic Services (1024)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/26184"
+  },
+  {
+    "title": "The Prince",
+    "author": "Niccolò Machiavelli (1016)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1232"
+  },
+  {
+    "title": "Walden, and On The Duty Of Civil Disobedience",
+    "author": "Henry David Thoreau (1011)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/205"
+  },
+  {
+    "title": "The Black Company :",
+    "author": "W. B. M. Ferguson (1003)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/77438"
+  },
+  {
+    "title": "Thus Spake Zarathustra: A Book for All and None",
+    "author": "Friedrich Wilhelm Nietzsche (1002)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1998"
+  },
+  {
+    "title": "Metamorphosis",
+    "author": "Franz Kafka (996)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/5200"
+  },
+  {
+    "title": "Second Treatise of Government",
+    "author": "John Locke (958)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/7370"
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoyevsky (954)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/28054"
+  },
+  {
+    "title": "Twas the Night before Christmas: A Visit from St. Nicholas",
+    "author": "Clement Clarke Moore (901)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/17135"
+  },
+  {
+    "title": "Ulysses",
+    "author": "James Joyce (897)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/4300"
+  },
+  {
+    "title": "Grimms' Fairy Tales",
+    "author": "Jacob Grimm and Wilhelm Grimm (875)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2591"
+  },
+  {
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum (862)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/55"
+  },
+  {
+    "title": "Anne of Green Gables",
+    "author": "L. M. Montgomery (851)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/45"
+  },
+  {
+    "title": "The Souls of Black Folk",
+    "author": "W. E. B. Du Bois (849)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/408"
+  },
+  {
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle (838)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2852"
+  },
+  {
+    "title": "The Confessions of St. Augustine",
+    "author": "Bishop of Hippo Saint Augustine (827)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/3296"
+  },
+  {
+    "title": "The doomed city",
+    "author": "John R. Carling (812)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/77443"
+  },
+  {
+    "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+    "author": "Frederick Douglass (810)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/23"
+  },
+  {
+    "title": "Beyond Good and Evil",
+    "author": "Friedrich Wilhelm Nietzsche (804)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/4363"
+  },
+  {
+    "title": "White Nights and Other Stories",
+    "author": "Fyodor Dostoyevsky (795)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/36034"
+  },
+  {
+    "title": "The Yellow Wallpaper",
+    "author": "Charlotte Perkins Gilman (791)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1952"
+  },
+  {
+    "title": "The Contemporary Review, Volume 36, October 1879",
+    "author": "Various (786)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/39459"
+  },
+  {
+    "title": "War and Peace",
+    "author": "graf Leo Tolstoy (773)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2600"
+  },
+  {
+    "title": "The divine comedy",
+    "author": "Dante Alighieri (772)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/8800"
+  },
+  {
+    "title": "Bleak House",
+    "author": "Charles Dickens (764)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1023"
+  },
+  {
+    "title": "The Iliad",
+    "author": "Homer (763)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/6130"
+  },
+  {
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson (754)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/120"
+  },
+  {
+    "title": "The Place of Honeymoons",
+    "author": "Harold MacGrath (743)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/26593"
+  },
+  {
+    "title": "Moby Multiple Language Lists of Common Words",
+    "author": "Grady Ward (726)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/3206"
+  },
+  {
+    "title": "Tractatus Logico-Philosophicus",
+    "author": "Ludwig Wittgenstein (718)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/5740"
+  },
+  {
+    "title": "Two on a Tower",
+    "author": "Thomas Hardy (709)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/3146"
+  },
+  {
+    "title": "Doctrina Christiana (708)",
+    "author": null,
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/16119"
+  },
+  {
+    "title": "How to Observe: Morals and Manners",
+    "author": "Harriet Martineau (708)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/33944"
+  },
+  {
+    "title": "池北偶談",
+    "author": "Shizhen Wang (707)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/25162"
+  },
+  {
+    "title": "The Republic",
+    "author": "Plato (696)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1497"
+  },
+  {
+    "title": "Gulliver's Travels into Several Remote Nations of the World",
+    "author": "Jonathan Swift (692)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/829"
+  },
+  {
+    "title": "Little Women",
+    "author": "Louisa May Alcott (688)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/514"
+  },
+  {
+    "title": "On Liberty",
+    "author": "John Stuart Mill (680)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/34901"
+  },
+  {
+    "title": "On the Duties of the Clergy",
+    "author": "Bishop of Milan Saint Ambrose (665)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/22789"
+  },
+  {
+    "title": "The Works of Lord Byron. Vol. 5",
+    "author": "Baron George Gordon Byron Byron (660)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/23475"
+  },
+  {
+    "title": "A Christmas Carol",
+    "author": "Charles Dickens (660)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/24022"
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "graf Leo Tolstoy (646)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1399"
+  },
+  {
+    "title": "The Kama Sutra of Vatsyayana",
+    "author": "Vatsyayana (645)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/27827"
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer (634)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/1727"
+  },
+  {
+    "title": "India, Its Life and Thought",
+    "author": "John P. Jones (633)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/28117"
+  },
+  {
+    "title": "The Prairie Traveler: A Hand-book for Overland Expeditions",
+    "author": "Randolph B. Marcy (628)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/23066"
+  },
+  {
+    "title": "The Farmer Boy, and How He Became Commander-In-Chief",
+    "author": "Morrison Heady (597)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/27012"
+  },
+  {
+    "title": "Battle Honours of the British Army",
+    "author": "Charles Boswell Norman (596)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/49654"
+  },
+  {
+    "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African",
+    "author": "Equiano (593)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/15399"
+  },
+  {
+    "title": "Children's Literature",
+    "author": "Erle Elsworth Clippinger and Charles Madison Curry (589)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/25545"
+  },
+  {
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen (586)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/161"
+  },
+  {
+    "title": "The Works of Edgar Allan Poe — Volume 2",
+    "author": "Edgar Allan Poe (585)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/2148"
+  },
+  {
+    "title": "Frankenstein; Or, The Modern Prometheus",
+    "author": "Mary Wollstonecraft Shelley (585)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/41445"
+  },
+  {
+    "title": "The Tragical History of Doctor Faustus",
+    "author": "Christopher Marlowe (576)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/779"
+  },
+  {
+    "title": "The Legend of Sleepy Hollow",
+    "author": "Washington Irving (569)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/41"
+  },
+  {
+    "title": "The lesser Key of Solomon, Goetia, the book of evil spirits : (567)",
+    "author": null,
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/72679"
+  },
+  {
+    "title": "The Book of Christmas",
+    "author": "Various (562)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/66957"
+  },
+  {
+    "title": "History of the Negro Race in America from 1619 to 1880. Vol. 2",
+    "author": "George Washington Williams (548)",
+    "cover_image": null,
+    "source_url": "https://www.gutenberg.org/ebooks/21851"
+  }
+]
