@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LiberaryButton extends StatelessWidget {
-  const LiberaryButton.text({
+class LibraryButton extends StatelessWidget {
+  const LibraryButton.text({
     super.key,
     required String label,
     required VoidCallback onTap,
@@ -13,7 +13,7 @@ class LiberaryButton extends StatelessWidget {
        _backgroundColor = backgroundColor,
        _textStyle = textStyle;
 
-  const LiberaryButton.icon({
+  const LibraryButton.icon({
     super.key,
     required String label,
     required IconData icon,

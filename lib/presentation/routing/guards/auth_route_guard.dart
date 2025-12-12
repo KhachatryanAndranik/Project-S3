@@ -15,7 +15,7 @@ class AuthRouteGuard extends AutoRouteGuard {
     final isAuthenticated = await _authCubit.checkAuthenticatedUser();
 
     if (isAuthenticated) {
-      router.replaceAll([const LiberaryRoute()]);
+      router.replaceAll([const LibraryRoute()]);
 
       return;
     }

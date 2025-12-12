@@ -15,5 +15,9 @@ class SharedDependencies extends PackageDependencies {
     );
 
     di.registerSingleton<KeyValueStorage>(appKeyValueStorage);
+
+    final dataScraper = PythonDataScraper(jsonStringConverter: di());
+
+    di.registerLazySingleton<DataScraper>(() => dataScraper);
   }
 }

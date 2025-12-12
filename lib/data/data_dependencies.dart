@@ -28,9 +28,8 @@ class DataDependencies extends PackageDependencies {
     );
 
     di.registerLazySingleton<AuthRepository>(
-      () => LiberaryAuthRepository(
-        authLocalDataSource: di<AuthLocalDataSource>(),
-      ),
+      () =>
+          LibraryAuthRepository(authLocalDataSource: di<AuthLocalDataSource>()),
     );
   }
 }

@@ -20,12 +20,12 @@ class AppRouter extends RootStackRouter {
       guards: [AuthRouteGuard(authCubit: di())],
     ),
     AutoRoute(path: RoutePath.signUp, page: SignUpRoute.page),
-    AutoRoute(path: RoutePath.liberary, page: LiberaryRoute.page),
+    AutoRoute(path: RoutePath.library, page: LibraryRoute.page),
   ];
 }
 
 class RoutePath {
   static const login = '/login';
   static const signUp = '/sign_up';
-  static const liberary = '/liberary';
+  static const library = '/library';
 }

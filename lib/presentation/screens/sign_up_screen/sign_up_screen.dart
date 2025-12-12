@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:library_app/domain.dart';
 import 'package:library_app/presentation/common.dart';
-import 'package:library_app/presentation/common/widgets/liberary_button.dart';
+import 'package:library_app/presentation/common/widgets/library_button.dart';
 
 @RoutePage()
 class SignUpScreen extends StatefulWidget {
@@ -98,7 +98,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ],
                     const SizedBox(height: 24),
-                    LiberaryButton.text(
+                    LibraryButton.text(
                       label: 'Sign Up',
                       onTap: () {
                         context.read<AuthCubit>().signUp(

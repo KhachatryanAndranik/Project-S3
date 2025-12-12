@@ -11,17 +11,17 @@
 part of 'app_router.dart';
 
 /// generated route for
-/// [LiberaryScreen]
-class LiberaryRoute extends PageRouteInfo<void> {
-  const LiberaryRoute({List<PageRouteInfo>? children})
-    : super(LiberaryRoute.name, initialChildren: children);
+/// [LibraryScreen]
+class LibraryRoute extends PageRouteInfo<void> {
+  const LibraryRoute({List<PageRouteInfo>? children})
+    : super(LibraryRoute.name, initialChildren: children);
 
-  static const String name = 'LiberaryRoute';
+  static const String name = 'LibraryRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const LiberaryScreen();
+      return const LibraryScreen();
     },
   );
 }

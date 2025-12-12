@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:library_app/domain.dart';
 import 'package:library_app/presentation/common.dart';
-import 'package:library_app/presentation/common/widgets/liberary_button.dart';
+import 'package:library_app/presentation/common/widgets/library_button.dart';
 import 'package:library_app/presentation/routing.dart';
 
 @RoutePage()
@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
       listenWhen: (previous, current) =>
           previous is! AuthenticatedState && current is AuthenticatedState,
       listener: (context, state) {
-        context.router.replaceAll([const LiberaryRoute()]);
+        context.router.replaceAll([const LibraryRoute()]);
       },
       child: LibraryScaffold(
         appBar: const LibraryAppBar(title: 'Login'),
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                   const SizedBox(height: 24),
-                  LiberaryButton.text(
+                  LibraryButton.text(
                     label: 'Login',
                     onTap: () {
                       context.read<AuthCubit>().logIn(
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                   const SizedBox(height: 16),
-                  LiberaryButton.text(
+                  LibraryButton.text(
                     label: 'Sign Up',
                     onTap: () {
                       context.read<AuthCubit>().resetError();

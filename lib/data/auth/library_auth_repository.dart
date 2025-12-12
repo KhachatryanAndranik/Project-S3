@@ -1,8 +1,8 @@
 import 'package:library_app/data.dart';
 import 'package:library_app/domain.dart';
 
-class LiberaryAuthRepository implements AuthRepository {
-  const LiberaryAuthRepository({required AuthDataSource authLocalDataSource})
+class LibraryAuthRepository implements AuthRepository {
+  const LibraryAuthRepository({required AuthDataSource authLocalDataSource})
     : _authLocalDataSource = authLocalDataSource;
 
   final AuthDataSource _authLocalDataSource;
@@ -27,7 +27,7 @@ class LiberaryAuthRepository implements AuthRepository {
 
     return response != null ? User.fromDto(response) : null;
   }
-  
+
   @override
   Future<void> logOut() {
     return _authLocalDataSource.logOut();
