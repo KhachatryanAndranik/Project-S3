@@ -60,7 +60,7 @@ class AuthLocalDataSource implements AuthDataSource {
     if (rows.isEmpty) {
       throw Exception('Failed to create user');
     }
-    
+
     final userDto = UserDto.fromJson(rows.first);
 
     await _storeAuthenticatedUserId(userDto.id);
@@ -70,16 +70,19 @@ class AuthLocalDataSource implements AuthDataSource {
 
   @override
   Future<UserDto?> fetchAuthenticatedUser() async {
-    final userId = await _deviceKeyValueStorage.read<int>('authenticated_user_id');
+    final userId = await _deviceKeyValueStorage.read<int>(
+      'authenticated_user_id',
+    );
 
     if (userId == null) {
       return null;
     }
 
-    return _fetchUserById(userId);
+    return fetchUserById(userId);
   }
 
-  Future<UserDto?> _fetchUserById(int userId) async {
+  @override
+  Future<UserDto?> fetchUserById(int userId) async {
     final result = await _cacheDatabase.query(
       'SELECT * FROM ${DatabaseConstants.users} '
       'WHERE ${DatabaseConstants.id} = ? '
@@ -94,12 +97,12 @@ class AuthLocalDataSource implements AuthDataSource {
     return UserDto.fromJson(result.first);
   }
 
-  Future<void> _storeAuthenticatedUserId(int userId) {
-    return _deviceKeyValueStorage.write<int>('authenticated_user_id', userId);
-  }
-  
   @override
   Future<void> logOut() {
     return _deviceKeyValueStorage.remove('authenticated_user_id');
+  }
+
+  Future<void> _storeAuthenticatedUserId(int userId) {
+    return _deviceKeyValueStorage.write<int>('authenticated_user_id', userId);
   }
 }

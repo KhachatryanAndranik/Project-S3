@@ -6,4 +6,5 @@ abstract class AuthDataSource {
   Future<UserDto> logIn(LoginCredentials credentials);
   Future<void> logOut();
   Future<UserDto?> fetchAuthenticatedUser();
+  Future<UserDto?> fetchUserById(int userId);
 }

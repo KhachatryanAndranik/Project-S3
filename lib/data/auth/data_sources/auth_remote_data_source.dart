@@ -22,4 +22,9 @@ class AuthRemoteDataSource implements AuthDataSource {
   Future<void> logOut() {
     throw UnimplementedError();
   }
+  
+  @override
+  Future<UserDto> fetchUserById(int userId) {
+    throw UnimplementedError();
+  }
 }

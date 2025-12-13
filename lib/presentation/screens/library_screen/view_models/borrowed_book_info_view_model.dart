@@ -1,7 +1,7 @@
 import 'package:library_app/presentation/common.dart';
 
-class BookBorrowedInfoViewModel {
-  const BookBorrowedInfoViewModel({
+class BorrowedBookInfoViewModel {
+  const BorrowedBookInfoViewModel({
     required this.user,
     required this.borrowedDate,
     required this.dueDate,

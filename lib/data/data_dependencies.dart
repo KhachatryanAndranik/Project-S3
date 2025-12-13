@@ -8,6 +8,7 @@ class DataDependencies extends PackageDependencies {
     final migrations = <CacheMigration>[
       (CacheDatabase db) async {
         await db.execute(createUsersTableSql);
+        await db.execute(borrowedBooks);
       },
     ];
 
@@ -30,6 +31,20 @@ class DataDependencies extends PackageDependencies {
     di.registerLazySingleton<AuthRepository>(
       () =>
           LibraryAuthRepository(authLocalDataSource: di<AuthLocalDataSource>()),
+    );
+
+    di.registerLazySingleton(
+      () => BooksLocalDataSource(
+        cacheDatabase: di<CacheDatabase>(),
+        jsonStringConverter: di(),
+      ),
+    );
+
+    di.registerLazySingleton<BooksRepository>(
+      () => LibraryBooksRepository(
+        booksLocalDataSource: di<BooksLocalDataSource>(),
+        authLocalDataSource: di<AuthLocalDataSource>(),
+      ),
     );
   }
 }

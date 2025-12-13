@@ -7,4 +7,11 @@ abstract class DatabaseConstants {
   static const String email = 'email';
   static const String name = 'name';
   static const String surname = 'surname';
+
+  static const String borrowedBooks = 'borrowedBooks';
+
+  static const String dueDate = 'dueDate';
+  static const String borrowedDate = 'borrowedDate';
+  static const String userId = 'userId';
+  static const String bookId = 'bookId';
 }

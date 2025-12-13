@@ -55,7 +55,6 @@ def scrape_gutenberg_top100():
     ).text
     soup = BeautifulSoup(html, "html.parser")
 
-    # The Top 100 list is the first ordered list after the "Top 100 EBooks yesterday" heading.
     h2 = soup.find(lambda t: t.name in ["h2", "h3"] and "Top 100 EBooks yesterday" in t.get_text())
     if not h2:
         raise RuntimeError("Could not find the 'Top 100 EBooks yesterday' section.")
@@ -73,8 +72,6 @@ def scrape_gutenberg_top100():
         title, author = parse_title_author(a.get_text(" ", strip=True))
         book_url = "https://www.gutenberg.org" + a["href"]
 
-        # Gutenberg doesn't always provide cover images on the top list page itself,
-        # so we enrich with Open Library cover lookup (optional).
         cover_image = openlibrary_cover_from_title_author(title, author)
 
         books.append(

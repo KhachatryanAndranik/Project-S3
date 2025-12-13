@@ -6,7 +6,6 @@ import requests
 OUT_FILE = "books_via_api.json"
 
 def cover_url(cover_i: int | None, size="L") -> str | None:
-    # size: S, M, L
     if not cover_i:
         return None
     return f"https://covers.openlibrary.org/b/id/{cover_i}-{size}.jpg"
@@ -15,7 +14,6 @@ def search_openlibrary(query: str, limit: int = 50):
     params = {
         "q": query,
         "limit": limit,
-        # fields keeps payload small and consistent
         "fields": "title,author_name,cover_i,key",
     }
     url = f"https://openlibrary.org/search.json?{urlencode(params)}"
@@ -38,7 +36,6 @@ def main():
                 "title": title,
                 "author": author,
                 "cover_image": cover,
-                # optional: openlibrary work/edition key
                 "openlibrary_key": d.get("key"),
             }
         )

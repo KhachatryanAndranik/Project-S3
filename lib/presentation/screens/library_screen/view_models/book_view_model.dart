@@ -6,13 +6,15 @@ class BookViewModel {
     required this.id,
     required this.title,
     required this.authorName,
-    this.borrowedInfo,
+    this.coverImageUrl,
+    this.borrowedInfo, 
   });
 
   final String id;
   final String title;
   final String authorName;
-  final BookBorrowedInfoViewModel? borrowedInfo;
+  final String? coverImageUrl;
+  final BorrowedBookInfoViewModel? borrowedInfo;
 
   BookStatus get status =>
       borrowedInfo == null ? BookStatus.available : BookStatus.borrowed;
@@ -26,7 +28,7 @@ final booksMock = <BookViewModel>[
     id: '2',
     title: 'To Kill a Mockingbird',
     authorName: 'Harper Lee',
-    borrowedInfo: BookBorrowedInfoViewModel(
+    borrowedInfo: BorrowedBookInfoViewModel(
       user: UserViewModel(
         id: 0,
         name: 'John Doe',
@@ -52,7 +54,7 @@ final booksMock = <BookViewModel>[
     id: '5',
     title: 'Brave New World',
     authorName: 'Aldous Huxley',
-    borrowedInfo: BookBorrowedInfoViewModel(
+    borrowedInfo: BorrowedBookInfoViewModel(
       user: UserViewModel(
         id: 1,
         name: 'Alice',
@@ -69,7 +71,7 @@ final booksMock = <BookViewModel>[
     id: '7',
     title: 'The Catcher in the Rye',
     authorName: 'J.D. Salinger',
-    borrowedInfo: BookBorrowedInfoViewModel(
+    borrowedInfo: BorrowedBookInfoViewModel(
       user: UserViewModel(
         id: 2,
         name: 'Bob',
@@ -90,7 +92,7 @@ final booksMock = <BookViewModel>[
     id: '9',
     title: 'The Hobbit',
     authorName: 'J.R.R. Tolkien',
-    borrowedInfo: BookBorrowedInfoViewModel(
+    borrowedInfo: BorrowedBookInfoViewModel(
       user: UserViewModel(
         id: 3,
         name: 'Carol',
@@ -108,7 +110,7 @@ final booksMock = <BookViewModel>[
     id: '12',
     title: 'Dune',
     authorName: 'Frank Herbert',
-    borrowedInfo: BookBorrowedInfoViewModel(
+    borrowedInfo: BorrowedBookInfoViewModel(
       user: UserViewModel(
         id: 4,
         name: 'David',

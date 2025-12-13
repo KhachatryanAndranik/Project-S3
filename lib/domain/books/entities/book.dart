@@ -1,0 +1,41 @@
+import 'package:library_app/data.dart';
+import 'package:library_app/domain.dart';
+import 'package:library_app/presentation/screens/library_screen/view_models.dart';
+
+class Book {
+  const Book({
+    required this.id,
+    required this.title,
+    required this.author,
+    this.borrowedData,
+    this.coverImageUrl,
+  });
+
+  final String id;
+  final String title;
+  final String author;
+  final String? coverImageUrl;
+  final BorrowedBookData? borrowedData;
+
+  factory Book.fromDto(BookDto dto) {
+    return Book(
+      id: dto.id ?? '',
+      title: dto.title ?? '',
+      author: dto.author ?? '',
+      coverImageUrl: dto.coverImageUrl,
+      borrowedData: dto.borrowedData != null
+          ? BorrowedBookData.fromDto(dto.borrowedData!)
+          : null,
+    );
+  }
+
+  BookViewModel toViewModel() {
+    return BookViewModel(
+      id: id,
+      title: title,
+      authorName: author,
+      coverImageUrl: coverImageUrl,
+      borrowedInfo: borrowedData?.toViewModel(),
+    );
+  }
+}

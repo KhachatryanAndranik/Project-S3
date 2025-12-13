@@ -32,4 +32,20 @@ class UserDto {
       'email': email,
     };
   }
+
+  UserDto copyWith({
+    int? id,
+    String? username,
+    String? name,
+    String? surname,
+    String? email,
+  }) {
+    return UserDto(
+      id: id ?? this.id,
+      username: username ?? this.username,
+      name: name ?? this.name,
+      surname: surname ?? this.surname,
+      email: email ?? this.email,
+    );
+  }
 }
