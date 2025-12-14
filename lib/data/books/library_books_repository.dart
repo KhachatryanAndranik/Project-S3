@@ -18,7 +18,9 @@ class LibraryBooksRepository implements BooksRepository {
     final borrowedBooks = await _booksLocalDataSource.fetchBorrowedBooks();
 
     for (final bookDto in booksDto) {
-      books.add(Book.fromDto(bookDto));
+      final book = Book.fromDto(bookDto);
+
+      books.add(book);
 
       try {
         final borrowedBook = borrowedBooks.firstWhere(
@@ -33,16 +35,16 @@ class LibraryBooksRepository implements BooksRepository {
           continue;
         }
 
-        final updatedBookDto = bookDto.copyWith(
-          borrowedData: BorrowedBookDto(
-            user: user,
-            dueDate: borrowedBook.dueDate ?? DateTime.now(),
-            borrowedDate: borrowedBook.borrowedDate ?? DateTime.now(),
+        books.removeLast();
+        books.add(
+          book.copyWith(
+            borrowedData: BorrowedBookData(
+              user: User.fromDto(user),
+              dueDate: borrowedBook.dueDate ?? DateTime.now(),
+              borrowedDate: borrowedBook.borrowedDate ?? DateTime.now(),
+            ),
           ),
         );
-
-        books.removeLast();
-        books.add(Book.fromDto(updatedBookDto));
       } catch (_) {}
     }
 

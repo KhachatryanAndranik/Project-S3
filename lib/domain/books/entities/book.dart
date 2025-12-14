@@ -23,9 +23,6 @@ class Book {
       title: dto.title ?? '',
       author: dto.author ?? '',
       coverImageUrl: dto.coverImageUrl,
-      borrowedData: dto.borrowedData != null
-          ? BorrowedBookData.fromDto(dto.borrowedData!)
-          : null,
     );
   }
 
@@ -36,6 +33,22 @@ class Book {
       authorName: author,
       coverImageUrl: coverImageUrl,
       borrowedInfo: borrowedData?.toViewModel(),
+    );
+  }
+
+  Book copyWith({
+    String? id,
+    String? title,
+    String? author,
+    String? coverImageUrl,
+    BorrowedBookData? borrowedData,
+  }) {
+    return Book(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      author: author ?? this.author,
+      coverImageUrl: coverImageUrl ?? this.coverImageUrl,
+      borrowedData: borrowedData ?? this.borrowedData,
     );
   }
 }

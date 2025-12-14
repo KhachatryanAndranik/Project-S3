@@ -5,7 +5,8 @@ class CustomJsonDecoder {
 
   final List<Map<Type, FromJsonFactory<dynamic>>> _factories;
 
-  void addFactory(Map<Type, FromJsonFactory<dynamic>> typeFactory) => _factories.add(typeFactory);
+  void addFactory(Map<Type, FromJsonFactory<dynamic>> typeFactory) =>
+      _factories.add(typeFactory);
 
   T decode<T>(dynamic entity) {
     if (entity is T) {
@@ -16,10 +17,13 @@ class CustomJsonDecoder {
       return _decodeMap<T>(entity);
     }
 
-    throw UnimplementedError('Decoding for ${entity.runtimeType} is not supported yet.');
+    throw UnimplementedError(
+      'Decoding for ${entity.runtimeType} is not supported yet.',
+    );
   }
 
-  T _decodeMap<T>(Map<String, dynamic> values) => _getFromJsonFactory<T>()(values);
+  T _decodeMap<T>(Map<String, dynamic> values) =>
+      _getFromJsonFactory<T>()(values);
 
   FromJsonFactory<T> _getFromJsonFactory<T>() {
     for (final list in _factories) {

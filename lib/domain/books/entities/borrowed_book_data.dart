@@ -1,4 +1,3 @@
-import 'package:library_app/data.dart';
 import 'package:library_app/domain.dart';
 import 'package:library_app/presentation/screens/library_screen/view_models.dart';
 
@@ -12,14 +11,6 @@ class BorrowedBookData {
   final User user;
   final DateTime borrowedDate;
   final DateTime dueDate;
-
-  factory BorrowedBookData.fromDto(BorrowedBookDto dto) {
-    return BorrowedBookData(
-      user: User.fromDto(dto.user),
-      borrowedDate: dto.borrowedDate,
-      dueDate: dto.dueDate,
-    );
-  }
 
   BorrowedBookInfoViewModel toViewModel() {
     return BorrowedBookInfoViewModel(

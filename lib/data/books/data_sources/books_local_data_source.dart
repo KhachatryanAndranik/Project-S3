@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:library_app/core.dart';
 import 'package:library_app/data.dart';
@@ -20,8 +22,19 @@ class BooksLocalDataSource implements BooksDataSource {
       'assets/books_data/books_via_api.json',
     );
 
-    final List<BookDto> books = _jsonStringConverter
-        .fromJsonString<List<BookDto>>(jsonString);
+    final booksJson = jsonDecode(jsonString);
+
+    if (booksJson is! List) {
+      return [];
+    }
+
+    final books = <BookDto>[];
+
+    for (final bookJson in booksJson) {
+      final book = _jsonStringConverter.fromJsonString<BookDto>(bookJson);
+
+      books.add(book);
+    }
 
     return books;
   }
@@ -36,8 +49,8 @@ class BooksLocalDataSource implements BooksDataSource {
       arguments: [
         borrowData.userId,
         borrowData.bookId,
-        borrowData.dueDate,
-        borrowData.borrowedDate,
+        borrowData.dueDate?.toIso8601String(),
+        borrowData.borrowedDate?.toIso8601String(),
       ],
     );
   }

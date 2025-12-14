@@ -2,8 +2,8 @@ class BorrowBookData {
   BorrowBookData({
     required this.bookId,
     required this.userId,
-    required this.borrowedDate,
-    required this.dueDate,
+    this.borrowedDate,
+    this.dueDate,
   });
 
   final String bookId;
