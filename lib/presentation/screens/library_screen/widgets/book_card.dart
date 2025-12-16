@@ -79,6 +79,13 @@ class _BookCardState extends State<BookCard> with TickerProviderStateMixin {
         decoration: BoxDecoration(
           color: const Color(0xFF6D4C41),
           borderRadius: BorderRadius.circular(16),
+          image: widget.book.coverImageUrl != null
+              ? DecorationImage(
+                  image: NetworkImage(widget.book.coverImageUrl!),
+                  fit: BoxFit.cover,
+                  opacity: 0.8,
+                )
+              : null,
           boxShadow: const [
             BoxShadow(
               color: Color(0x33000000),

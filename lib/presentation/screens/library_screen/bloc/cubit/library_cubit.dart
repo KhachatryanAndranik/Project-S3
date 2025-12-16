@@ -12,6 +12,29 @@ class LibraryCubit extends Cubit<LibraryState> {
   }
 
   final BooksRepository _booksRepository;
+  var _allBooks = <BookViewModel>[];
+  var _searchQuery = '';
+
+  Future<void> searchBooks(String query) async {
+    _searchQuery = query;
+    final normalized = query.trim().toLowerCase();
+
+    if (normalized.isEmpty) {
+      emit(LibraryState.loaded(books: _allBooks));
+
+      return;
+    }
+
+    final filteredBooks = _allBooks
+        .where(
+          (book) =>
+              book.title.toLowerCase().contains(normalized) ||
+              book.authorName.toLowerCase().contains(normalized),
+        )
+        .toList();
+
+    emit(LibraryState.loaded(books: filteredBooks));
+  }
 
   Future<void> fetchBooks() async {
     try {
@@ -19,7 +42,9 @@ class LibraryCubit extends Cubit<LibraryState> {
 
       final bookViewModels = books.map((book) => book.toViewModel()).toList();
 
-      emit(LibraryState.loaded(books: bookViewModels));
+      _allBooks = bookViewModels;
+
+      await searchBooks(_searchQuery);
     } catch (e) {
       emit(LibraryState.error(message: e.toString()));
     }

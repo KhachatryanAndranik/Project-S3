@@ -6,6 +6,7 @@ import 'package:library_app/presentation/common.dart';
 import 'package:library_app/presentation/routing/app_router.dart';
 import 'package:library_app/presentation/screens/library_screen/bloc/cubit/library_cubit.dart';
 import 'package:library_app/presentation/screens/library_screen/widgets/book_card.dart';
+import 'package:library_app/presentation/screens/library_screen/widgets/search_book_section.dart';
 
 @RoutePage()
 class LibraryScreen extends StatelessWidget {
@@ -40,18 +41,35 @@ class LibraryScreen extends StatelessWidget {
                 return Center(child: Text('Error: ${state.message}'));
               } else if (state is LibraryLoadedState) {
                 final books = state.books;
-                return ListView.separated(
-                  padding: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).padding.bottom + 16,
-                    top: 16,
-                    left: 16,
-                    right: 16,
+
+                return Padding(
+                  padding: const EdgeInsets.only(top: 16.0),
+                  child: Column(
+                    children: [
+                      SearchBookSection(
+                        onQueryChanged: context
+                            .read<LibraryCubit>()
+                            .searchBooks,
+                      ),
+                      Expanded(
+                        child: books.isEmpty
+                            ? const Center(child: Text('No books found'))
+                            : ListView.separated(
+                                padding: EdgeInsets.only(
+                                  bottom: 16,
+                                  top: 16,
+                                  left: 16,
+                                  right: 16,
+                                ),
+                                itemCount: books.length,
+                                itemBuilder: (context, index) =>
+                                    BookCard(book: books[index]),
+                                separatorBuilder: (context, index) =>
+                                    const SizedBox(height: 16),
+                              ),
+                      ),
+                    ],
                   ),
-                  itemCount: books.length,
-                  itemBuilder: (context, index) =>
-                      BookCard(book: books[index]),
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(height: 16),
                 );
               }
 
