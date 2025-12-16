@@ -101,6 +101,7 @@ class _BookCardState extends State<BookCard> with TickerProviderStateMixin {
             mainAxisSize: MainAxisSize.min,
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Text(
